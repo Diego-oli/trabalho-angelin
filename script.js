@@ -21,7 +21,19 @@ if(valor > 0 && valor <=100){
 } else {
     saida.innerHTML = "Está fora do intervalo";
 }
-
+{
+    tentativas--;
+    document.getElementById("chances").innerHTML = "tentativas" + tentativas;
+    if(tentativas == 0){
+        document.getElementById("btn").disabled = true;
+        if(valor == sort){
+            saida.innerHTML = "acertou";
+        }
+        else{
+            saida.innerHTML = "Acabaram as tentativas, o numero sorteado era: " + sort;
+        }
+    }
+}
 }
 
 tentativas--;
