@@ -11,19 +11,19 @@ function clique() {
         if (tentativas > 0) {
             if (valor == sort) {
                 saida.innerHTML = "Acertou!!!!";
-                tentativas = 0; // Acertou, não há mais tentativas.
-                document.getElementById("btn").disabled = true;
+                document.getElementById("btn").disabled = true; // Desabilita o botão
             } else if (valor > sort) {
                 saida.innerHTML = "O valor sorteado é menor";
             } else if (valor < sort) {
                 saida.innerHTML = "O valor sorteado é maior";
             }
 
-            tentativas--; // Decrementa as tentativas
+            // Decrementa as tentativas apenas se o usuário não acertou
+            tentativas--;
             document.getElementById("chances").innerHTML = "Tentativas: " + tentativas;
 
             if (tentativas == 0) {
-                document.getElementById("btn").disabled = true;
+                document.getElementById("btn").disabled = true; // Desabilita o botão se as tentativas acabarem
                 if (valor != sort) {
                     saida.innerHTML = "Acabaram as tentativas, o número sorteado era: " + sort;
                 }
@@ -38,6 +38,6 @@ function novo() {
     sort = Math.floor(Math.random() * 100) + 1;
     tentativas = 5;
     document.getElementById("chances").innerHTML = "Tentativas: " + tentativas;
-    document.getElementById("btn").disabled = false;
+    document.getElementById("btn").disabled = false; // Habilita o botão
     saida.innerHTML = "&nbsp;"; // Limpa a saída
 }

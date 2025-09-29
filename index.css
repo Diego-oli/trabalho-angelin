@@ -1,12 +1,15 @@
+/* Resetting default margins and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Styling the body with a background image, and making sure the layout is centered */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ClU4l6phXsnaGbVHETkecQsqfvLy5LZO3A&s') no-repeat center center fixed;
+    background-size: cover;
     color: #fff;
     height: 100vh;
     display: flex;
@@ -17,37 +20,43 @@ body {
     text-align: center;
 }
 
+/* Styling for the main heading */
 h1 {
     font-size: 4vh;
     margin-bottom: 4vh;
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+    color: rgb(255, 105, 180); /* RGB Pink for the heading */
 }
 
+/* Styling the div containing form elements */
 div {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background for better contrast */
     padding: 5vh 4vw;
     border-radius: 2vh;
-    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.5);
     width: 100%;
     max-width: 400px;
 }
 
+/* Input number field styling */
 input[type="number"] {
     width: 80%;
     padding: 1.2vh;
     font-size: 2vh;
-    border: none;
+    border: 2px solid rgb(255, 165, 0); /* RGB Orange border on input */
     border-radius: 1vh;
     outline: none;
     margin-bottom: 3vh;
-    transition: 0.3s ease;
+    transition: 0.s ease;
 }
 
+/* Input field focus effect */
 input[type="number"]:focus {
-    border: 2px solid #fff;
-    box-shadow: 0 0 1vh rgba(255, 255, 255, 0.5);
+    border: 2px solid rgb(0, 255, 255); /* RGB Cyan on focus */
+    box-shadow: 0 0 1vh rgba(0, 255, 255, 0.5);
 }
 
+/* Button styling */
 button {
     padding: 1.5vh 3vw;
     font-size: 2vh;
@@ -61,33 +70,37 @@ button {
     color: white;
 }
 
+/* Button 1: Green */
 #btn {
-    background-color: #00b894;
+    background-color: rgb(0, 184, 148); /* RGB Green */
 }
 
 #btn:hover {
-    background-color: #55efc4;
+    background-color: rgb(85, 239, 196); /* Light Green */
     transform: translateY(-0.3vh);
 }
 
+/* Button 2: Red */
 #btn2 {
-    background-color: #d63031;
+    background-color: rgb(214, 48, 49); /* RGB Red */
 }
 
 #btn2:hover {
-    background-color: #ff7675;
+    background-color: rgb(255, 118, 117); /* Light Red */
     transform: translateY(-0.3vh);
 }
 
+/* Output text styling */
 #output {
     margin-top: 3vh;
     font-size: 2vh;
     font-weight: bold;
-    color: #ffeaa7;
+    color: rgb(255, 234, 167); /* Soft Yellow for output */
 }
 
+/* Chances text styling */
 #chances {
     font-size: 1.8vh;
     margin-top: 1.5vh;
-    color: #dfe6e9;
+    color: rgb(223, 230, 233); /* Light Grayish text */
 }
